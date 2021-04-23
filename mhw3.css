@@ -1,0 +1,293 @@
+body{
+    margin: 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header{
+    height: 20vh;
+    width: 100%;
+    color:rgb(189, 189, 189);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(img3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+img{
+    height: 300px;
+    width: 30%;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    
+}
+.button,.button2 , nav a{
+    margin-left: 10px;
+    padding: 0 5;
+    color:rgb(189, 189, 189);
+    border: 2px solid rgb(189, 189, 189);
+    border-radius: 30px;
+    z-index: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+.button,.button2{
+    width:max-content;
+    text-align: center;
+    margin: 10px;
+    color:rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0,.5);
+}
+.button:hover, .button2:hover{
+    color: rgb(189, 189, 189);
+    background-color: rgb(0, 0, 0,.5);
+}
+a:hover{
+    color:black; 
+    background-color: rgb(189, 189, 189);
+    
+}
+header em{
+    text-align: center;
+    margin-top: 10px ;
+    z-index: 1;
+}
+
+h1{
+    text-transform : uppercase;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+}
+section h1{
+    margin :10px;
+}
+#overlay{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+footer{
+    background-color: rgba(15, 15, 15, 0.966);
+    height: 12vh;
+    display: flex;
+    justify-items:center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1em;
+}
+section{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: lightsteelblue;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+.reparto {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.descrizione{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    line-height: 25px;
+}
+h2,footer #name, footer em{
+    margin: 0%;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .4);
+}
+h2{
+    color :rgba(0, 0, 0, 0.61);
+}
+#menu{
+    display: none;
+}
+
+
+.content,.servizi,.preferiti,#risultati,#risposte{
+    display: flex;
+    flex-wrap: wrap;
+}
+#risultati,#risposte{
+    width: 100%;
+}
+
+.servizi h1,.preferiti h2 {
+    width: calc(100% - 20px);
+
+}
+
+.servizi h1{
+    font-size: .9em;
+    
+}
+
+
+.dottore,.servizio{
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    max-height: 100%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border: 2px solid gray;
+    background-color: rgba(128, 128, 128, 0.5);
+    
+}
+.dottore img,.servizi img,.preferiti img,#risultati img,#risposte img{
+    height: 80%;
+    width: 90%;
+    margin: 5%;
+}
+
+
+.dottore .button,.servizi .button{
+    margin-bottom: 10px;
+}
+
+
+.ricerca ,form{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#search ,#cibo{
+    width: 20%;
+    margin: 10px;
+    justify-self: flex-end;
+}
+.ricerca h2,#submit,.preferiti h2,#SearchCibo{
+    margin: 10px;
+}
+
+#covid{
+    background-image: url(covid-19.jpg);
+    background-position: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+#covid h2{
+    text-align: center;
+}
+#dati{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Green{
+    background-color: green;
+    
+}
+
+.Yellow{
+    background-color: yellow;
+}
+
+.Red{
+    background-color: red;
+}
+.Green , .Yellow, .Red{
+    border-radius: 30px;
+    margin: 10px;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
+.servizio .details{
+    margin: 10px;
+    text-align: center;
+}
+#covid h2,#covid h3{
+    color: black;
+    text-align: center;
+}
+#dieta h2{
+    margin: 10px;
+}
+
+
+.invisible{
+    display: none;
+}
+
+
+ @media (max-width: 500px){
+    .reparto , #risposte{
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    #risposte .servizio{
+        width: 90%;
+    }
+
+    #search{
+        width: 90%;
+    }
+    section{
+        align-items: center;
+    }
+    img{
+        height: 70%;
+        width: 80%;
+    }
+
+    header a{
+        display: none;
+    }
+    #hiddenMenu{
+        display: block;
+        z-index: 1;
+
+    }
+    #hiddenMenu div{
+        border:1px solid rgb(189, 189, 189);
+        margin: 3px;
+        height: 1px;
+        width: 25px;
+        display: flex;
+        margin-right: 10px;
+        z-index: 1;
+        background-color: rgb(189, 189, 189);
+    }
+    #hiddenMenu:hover{
+        display: block;
+        z-index: 1;
+
+    }
+    
+    .servizi .button,.content .button2,.preferiti .button,#risultati .button{
+        width: calc(100% - 25px);
+        color:rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0,.5);
+    }
+ }
+
+
+
+
+
